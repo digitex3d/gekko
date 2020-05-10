@@ -152,7 +152,7 @@ config.mailer = {
 
 config.pushbullet = {
   // sends pushbullets if true
-  enabled: false,
+  enabled: true,
   // Send 'Gekko starting' message if true
   sendMessageOnStart: true,
   // Send Message for advice? Recommend Flase for paper, true for live
@@ -162,9 +162,9 @@ config.pushbullet = {
   // For Overall P/L calc. Pass in old balance if desired, else leave '0'
   startingBalance: 0,
   // your pushbullet API key
-  key: '',
+  key: 'o.FRWjTqphBQxJmZaOQEX2zaCtNjQbti6Q',
   // your email
-  email: 'jon_snow@westeros.com',
+  email: 'digitex3d@gmail.com',
   // Messages will start with this tag
   tag: '[GEKKO]'
 };
@@ -534,6 +534,6 @@ config['tulip-adx'] = {
 // understand this.
 //
 // Not sure? Read this first: https://github.com/askmike/gekko/issues/201
-config['I understand that Gekko only automates MY OWN trading strategies'] = false;
+config['I understand that Gekko only automates MY OWN trading strategies'] = true;
 
 module.exports = config;

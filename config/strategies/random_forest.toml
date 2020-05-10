@@ -1,0 +1,15 @@
+history_length = 10
+history_buffer = 10
+
+horizon_length = 50
+input_length = 10
+dataset_size = 100
+
+short = 10
+long = 21
+signal = 9
+
+[thresholds]
+down = -0.025
+up = 0.025
+persistence = 1

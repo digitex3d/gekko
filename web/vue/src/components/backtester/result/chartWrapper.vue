@@ -1,18 +1,29 @@
-<template lang='pug'>
-#chartWrapper(v-bind:class='{ clickable: !isClicked }')
-  .shield(v-on:click.prevent='click')
-  svg#chart(width='960', :height='height')
+<template>
+  <div id="chartWrapper" :class="{ clickable: !isClicked }">
+    <svg id="chart" :height='height' width="960"></svg>
+  </div>
+
+  <div class="small">
+    <line-chart :chart-data="data"></line-chart>
+    <button @click="fillData()">Randomize</button>
+  </div>
+
 </template>
 
 <script>
 
-import chart from '../../../d3/chart4'
-import { draw as drawMessage, clear as clearMessage } from '../../../d3/message'
+import chart from '../../../d3/chart4';
+import { draw as drawMessage, clear as clearMessage } from '../../../d3/message';
+import LineChart from './LineChart.js'
 
 const MIN_CANDLES = 4;
 
 export default {
   props: ['data', 'height'],
+
+  components: {
+    LineChart
+  },
 
   data: function() {
     return {

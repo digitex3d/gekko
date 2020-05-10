@@ -1,0 +1,14 @@
+trading_enabled = 1
+
+dataset_filename = "dataset"
+
+horizon_length = 50
+input_length = 5
+dataset_size = 1000
+
+interval = 14
+
+[thresholds]
+low = 25
+high = 75
+persistence = 1
